@@ -29,7 +29,6 @@ jobs:
     - name: Run a one-line script
       env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
-          BRANCH_NAME: ${GITHUB_REF##*/}
           TEST_ARR: ${{secrets['KEY']}}
       run: |
         echo The PR number is $PR_NUMBER
